@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <%- include ('./header.ejs') %> <%- include ('./flashmessages.ejs') %>
+    <div class="container">
+      <div class="dashboard-head">
+        <span onclick="dashboard()">>></span>
+        <h5>Click To View Dashboard</h5>
+      </div>
+      <div class="blah">
+        <div class="dashboard-main">
+          <span>>></span>
+          <h5>Dashboard</h5>
+        </div>
+        <div class="list-dash">
+          <ul>
+            <li class="dash-li"><i class="fas fa-file-alt"></i> Profile</li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Appointments
+            </li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Medical Reports
+            </li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Add Schedule
+            </li>
+            <li class="dash-li"><i class="fas fa-file-alt"></i> Setting</li>
+          </ul>
+        </div>
+      </div>
+      <div class="form-container">
+        <form action="/dashboard" method="POST">
+          <div class="hero">
+            <h3>My Profile</h3>
+            <button class="primary-light" type="submit">Save Changes</button>
+          </div>
+          <div class="basic-container">
+            <div class="input-div">
+              <label for="name">Name</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="name"
+                name="name"
+                value="<%=username%>"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="name">Email</label>
+              <input
+                type="email"
+                class="dash-input"
+                id="email"
+                name="email"
+                value="<%=email%>"
+                required
+              />
+            </div>
+
+            <div class="input-div">
+              <label for="gender">Gender</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="gender"
+                name="gender"
+                value="<%=gender%>"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="date">Date of Birth</label>
+              <input
+                type="date"
+                class="dash-input"
+                id="date"
+                name="dateofbirth"
+                value="<%=dateofbirth%>"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="number">Number</label>
+              <input
+                type="text"
+                class="dash-input"
+                name="number"
+                id="number"
+                value="<%=number%>"
+                placeholder="Enter Your Number"
+              />
+            </div>
+          </div>
+          <hr />
+          <div class="address-container">
+            <div class="input-div">
+              <label for="houseno">House No/Street</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="houseno"
+                name="houseno"
+              />
+            </div>
+            <div class="input-div">
+              <label for="colony">Colony/Street/Locality</label>
+              <input type="text" class="dash-input" id="colony" name="colony" />
+            </div>
+            <div class="input-div">
+              <label for="city">City</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="city"
+                name="city"
+                value="<%=city%>"
+              />
+            </div>
+            <div class="input-div">
+              <label for="state">State</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="state"
+                name="state"
+                value="<%=state%>"
+              />
+            </div>
+            <div class="input-div">
+              <label for="country">Country</label>
+              <input
+                type="text"
+                class="dash-input"
+                id="country"
+                name="country"
+                value="<%=country%>"
+              />
+            </div>
+          </div>
+          <hr />
+          <% if(specialization){%>
+          <div class="doctor-container">
+            <div class="input-div">
+              <label for="hospital">Your Hospital</label>
+              <input
+                name="hospital"
+                id="hospital"
+                class="dash-input"
+                value="<%=hospital%>"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="achievement">Achievements</label>
+              <input
+                name="achievement"
+                class="dash-input"
+                id="achievement"
+                value="<%=achievement%>"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="experience">Years of experience</label>
+              <input
+                name="experience"
+                class="dash-input"
+                value="experience"
+                id="experience"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="qualification">Qualifications</label>
+              <input
+                name="qualification"
+                class="dash-input"
+                value="<%=qualification%>"
+                id="qualification"
+                required
+              />
+            </div>
+            <div class="input-div">
+              <label for="description">Describe Yourself</label>
+              <textarea
+                name="description"
+                id="description"
+                rows="3"
+                value="<%=description%>"
+                placeholder="Describe Yourself"
+              ></textarea>
+            </div>
+
+            <div class="input-div">
+              <label for="specialization">Specialization</label
+              ><input
+                name="specialization"
+                id="specialization"
+                value="<%=specialization%>"
+                class="dash-input"
+              />
+            </div>
+            <div class="input-div">
+              <label for="treatment">Treatment</label
+              ><input
+                name="treatment"
+                id="treatment"
+                value="<%=treatment%>"
+                class="dash-input"
+              />
+            </div>
+            <div class="input-div">
+              <label for="fees">Your average Fees</label
+              ><input
+                name="fees"
+                id="fees"
+                class="dash-input"
+                type="number"
+                value="<%=fees%>"
+              />
+            </div>
+            <div class="input-div">
+              <label for="awards">Awards</label
+              ><input
+                name="awards"
+                id="awards"
+                class="dash-input"
+                value="<%=awards%>"
+              />
+            </div>
+          </div>
+          <%}%>
+        </form>
+      </div>
+    </div>
+    <%- include ('./footer.ejs') %>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>

@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <link rel="stylesheet" href="/css/dashboard.css" />
+    <link rel="stylesheet" href="/css/myappointment.css" />
+    <title>Dashboard</title>
+  </head>
+  <body>
+    <%- include ('./header.ejs') %> <%- include ('./flashmessages.ejs') %>
+    <div class="container">
+      <div class="dashboard-head">
+        <span onclick="dashboard()">>></span>
+        <h5>Click To View Dashboard</h5>
+      </div>
+      <div class="blah">
+        <div class="dashboard-main">
+          <span>>></span>
+          <h5>Dashboard</h5>
+        </div>
+        <div class="list-dash">
+          <ul>
+            <li class="dash-li"><i class="fas fa-file-alt"></i> Profile</li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Appointments
+            </li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Medical Reports
+            </li>
+            <li class="dash-li">
+              <i class="fas fa-file-alt"></i> Add Schedule
+            </li>
+            <li class="dash-li"><i class="fas fa-file-alt"></i> Setting</li>
+          </ul>
+        </div>
+      </div>
+      <% if (status) { %>
+        <div class="form-container">
+          <form action="/myappointment" method="POST">
+            <div class="hero">
+              <h3>My Appointment</h3>
+              <button class="primary-light" type="submit">Delete</button>
+            </div>
+            <div class="basic-container" >
+              <div class="input-div">
+                <ul>
+                  <li>
+                    <h6>Name :</h6> <p><%= username %> </p>
+                  </li>
+                  <li>
+                    <h6>Email :</h6> <p><%= email %></p>
+                  </li>
+                  <li>
+                    <h6>Number :</h6> <p><%= number %></p>
+                  </li>
+                  <li>
+                    <h6>Gender :</h6> <p><%= gender %></p>
+                  </li>
+                  <li>
+                    <h6>Date Of Birth :</h6> <p><%= dateofbirth %></p>
+                  </li>
+                </ul>
+              </div>
+              <div class="input-div">
+                <ul>
+                  <li>
+                    <h6>Appointment Date :</h6> <p><%= appointdate %> </p>
+                  </li>
+                  <li>
+                    <h6>Time Interval :</h6>  <p><%= instance %> </p>
+                  </li>
+                  <li>
+                    <h6>Urgency :</h6>  <p><%= status %> </p>
+                  </li>
+                  <li>
+                    <h6>Details :</h6> <p><%= appointdetails %> </p>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            </form>
+            </div>
+            <% } %>
+            <% if (!status) { %>
+              <div class="no-appoint">
+                <h4>No Upcoming appointments</h4>
+                <div><a href="appointment.ejs"><button class="appoint-use">Book an Appointment</button></a></div>
+              </div>
+            <% } %>
+          </div>
+        
+    <%- include ('./footer.ejs') %>
+
+    <script src="/js/index.js"></script>
+  </body>
+</html>

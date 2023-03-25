@@ -1,0 +1,39 @@
+.container{
+    padding-bottom: 1rem;
+}
+.input-div p,.input-div h6{
+    display: inline;
+}
+.input-div li{
+    padding-bottom: 0.5rem;
+}
+.container {
+    padding-bottom: 0rem;
+}
+.no-appoint{
+    background-color: var(--white);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 4rem 0rem;
+}
+.appoint-use{
+    color: var(--white);
+    background-color: var(--dark-blue);
+    padding: 0.5rem 1rem;
+}
+.no-appoint h4{
+    color: var(--blue);
+}
+@media only screen and (min-width:1024px){
+.no-appoint{
+    width: 321%;
+    justify-content: center;
+}
+.no-appoint h4{
+    margin-bottom: 1rem;
+}
+.appoint-use{
+    padding: 1rem 2rem;
+}
+}

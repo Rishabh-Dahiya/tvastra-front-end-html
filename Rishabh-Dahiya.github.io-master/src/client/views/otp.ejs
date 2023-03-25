@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link href="/css/otp.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>otp</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <figure class="logo">
+        <a href="index.ejs"
+          ><img
+            src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+            alt="tvastra logo"
+        /></a>
+      </figure>
+      <div class="icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-mobile nav-desktop">
+        <div class="menu">
+          <ul>
+            <li><a href="./doctor.ejs">Doctor</a></li>
+            <li><a href="./hospital.ejs">Hospitals</a></li>
+            <li><a href="./treatment.ejs">Treatment</a></li>
+            <li><a href="./healthy.ejs">Other Services</a></li>
+            <li><a href="./tvastra-plus.ejs">About</a></li>
+          </ul>
+        </div>
+        <div class="menu-buttons">
+          <button class="primary-quote" id="quote">
+            <a href="contactus.ejs">Get a Quote</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <%- include ('./flashmessages.ejs') %>
+    <form method="post" action="/verifyotp/12345" id="loginform">
+      <div class="otpbox">
+        <div class="credentials">
+          <div class="heading">
+            <h5>Login</h5>
+          </div>
+          <div class="about-otp">
+            <p>
+              We have sent One time Password(OTP) to your registerd Phone text
+            </p>
+          </div>
+          <div class="userid">
+            <input
+              type="text"
+              class="dash"
+              id="digit1"
+              name="digit1"
+              data-next="digit2"
+              maxlength="1"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+              autofocus
+            />
+            <input
+              type="text"
+              class="dash"
+              id="digit2"
+              name="digit2"
+              data-next="digit3"
+              data-previous="digit1"
+              maxlength="1"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+              autofocus
+            />
+            <input
+              type="text"
+              class="dash"
+              id="digit3"
+              name="digit3"
+              data-next="digit4"
+              data-previous="digit2"
+              maxlength="1"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+              autofocus
+            />
+            <input
+              type="text"
+              class="dash"
+              id="digit4"
+              name="digit4"
+              data-next="digit5"
+              data-previous="digit3"
+              maxlength="1"
+              oninput="this.value=this.value.replace(/[^0-9]/g,'');"
+              autofocus
+            />
+          </div>
+          <div class="resend"><button id="btn-resend"></button></div>
+          <div class="lg-button">
+            <button class="primary-dark" type="submit"><h6>SUBMIT</h6></button>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <p>
+            Not Registered?
+            <a class="loginanchor" href="./signUp.ejs">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </form>
+    <div class="footer">
+      <h6>All rights reserved &copy. 2020</h6>
+    </div>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

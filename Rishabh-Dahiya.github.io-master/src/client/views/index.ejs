@@ -1,0 +1,607 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <link href="/css/stylesheet.css" type="text/css" rel="stylesheet" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <%- include ('./header.ejs') %> <%- include ('./flashmessages.ejs') %>
+    <section class="find">
+      <div class="bg-image">
+        <div class="container-find">
+          <h1>Find Affordable Healthcare</h1>
+          <p>
+            Join the thousands of others who have exercised their rights to
+            quality healthcare at a price you can afford
+          </p>
+          <form class="find-form">
+            <div class="find-loc">
+              <i class="fas fa-map-marker-alt"></i>
+              <input
+                name="location"
+                id="location"
+                list="cities"
+                placeholder="Ahemdabad"
+              />
+              <i class="fas fa-crosshairs"></i>
+            </div>
+            <input
+              name="find-by"
+              id="find-by"
+              list="doctors-hospital-treatments"
+              placeholder="Search for Doctors, hospitals and treatments"
+              required
+            />
+            <div class="find-by-bt">
+              <button class="primary-dark" id="search-location"><a href="about-hospital.ejs">Search</a></button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+    <section class="how-it-works">
+      <div class="heading-how">
+        <h1>How it works</h1>
+        <p>
+          Various facilities are provided here. But there is a protocol which
+          needs to be followed so that you get the service at its best.
+        </p>
+      </div>
+
+      <div class="desktop-how">
+        <ul class="steps">
+          <!----Step1-->
+          <li
+            class="activejs"
+            id="step1"
+            onclick="changeimage('step1','step1_fig')"
+          >
+            <span>01</span>
+            <h5>Fix Consultation</h5>
+          </li>
+          <figure class="show" id="step1_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.png"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step2-->
+          <li
+            id="step2"
+            class="grayjs"
+            onclick="changeimage('step2','step2_fig')"
+          >
+            <span>02</span>
+            <h5>Upload Medical Reports</h5>
+          </li>
+          <figure class="hide" id="step2_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img6.jpg"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step3-->
+          <li
+            class="grayjs"
+            id="step3"
+            onclick="changeimage('step3','step3_fig')"
+          >
+            <span>03</span>
+            <h5>Consult with doctor</h5>
+          </li>
+          <figure class="hide" id="step3_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img2.png"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step4-->
+          <li
+            class="grayjs"
+            id="step4"
+            onclick="changeimage('step4','step4_fig')"
+          >
+            <span>04</span>
+            <h5>Fix Surgery</h5>
+          </li>
+          <figure class="hide" id="step4_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img7.jpeg"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step5-->
+          <li
+            class="grayjs"
+            id="step5"
+            onclick="changeimage('step5','step5_fig')"
+          >
+            <span>05</span>
+            <h5>Hospital sent estimates</h5>
+          </li>
+          <figure class="hide" id="step5_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img2.png"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step6-->
+          <li
+            class="grayjs"
+            id="step6"
+            onclick="changeimage('step6','step6_fig')"
+          >
+            <span>06</span>
+            <h5>Payment</h5>
+          </li>
+          <figure class="hide" id="step6_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img3.jpeg"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+          <!----Step7-->
+          <li
+            class="grayjs"
+            id="step7"
+            onclick="changeimage('step7','step7_fig')"
+          >
+            <span>07</span>
+            <h5>Surgery Completed</h5>
+          </li>
+          <figure class="hide" id="step7_fig">
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img4.jpeg"
+              alt="Fix Consultation"
+            />
+            <h6>Fix Consultation</h6>
+            <p>
+              This depicts that user will have to fix appointment first when it
+              selects a particular doctor.
+            </p>
+          </figure>
+        </ul>
+      </div>
+    </section>
+    <section class="doctors">
+      <div class="doctor-heading">
+        <h2>World Class Expert Doctors!</h2>
+        <p>
+          The university of Texas Southeastern Medical center has been a long
+          world-renowned research hospital. But until the 80's. you couldn't go
+          there. Now, with the addition of Aston Center and Zale Lisphy
+          Hospital, UT Southeastern is also a mecca for patients.
+        </p>
+      </div>
+      <div id="active1" class="slide">
+        <div class="parent-doc w3-animate-right">
+          <div class="about-doc" id="doctor1">
+            <div class="doc-img">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--002.jpg"
+                alt="Duke Sanson"
+              />
+            </div>
+            <figcaption><h6>Duke Sanson</h6></figcaption>
+            <ul class="speciality">
+              <li>Neuro Surgeon</li>
+              <li>Chain Department of Neurological Surgery, Australia</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor2">
+            <div class="doc-img">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--004.jpg"
+                alt="Georgea Peter"
+              />
+            </div>
+            <figcaption><h6>Georgea Peter</h6></figcaption>
+            <ul class="speciality">
+              <li>Breast Cancer Surgeon</li>
+              <li>Director, UT, Southwest</li>
+              <li>London</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor3">
+            <div class="doc-img">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--005.jpg"
+                alt="Charlie Moon"
+              />
+            </div>
+            <figcaption><h6>Charlie Moon</h6></figcaption>
+            <ul class="speciality">
+              <li>Cardiac Surgeon</li>
+              <li>MBBS, MD, FRCP, Fellowship</li>
+              <li>New Delhi, India</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor4">
+            <div class="doc-img">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--003.jpg"
+                alt="Rose Moon"
+              />
+            </div>
+            <figcaption><h6>Rose Moon</h6></figcaption>
+            <ul class="speciality">
+              <li>Plastic Surgeon</li>
+              <li>Department of Plastic Surgery</li>
+              <li>Dubai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="active2" class="inactive">
+        <div class="parent-doc w3-animate-right">
+          <div class="about-doc" id="doctor5">
+            <div class="doc-img">
+              <img src="/img/femaledoctor1.jpg" alt="Donna" />
+            </div>
+            <figcaption><h6>Donna Clinton</h6></figcaption>
+            <ul class="speciality">
+              <li>Neuro Surgeon</li>
+              <li>Chain Department of Neurological Surgery, Australia</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor6">
+            <div class="doc-img">
+              <img src="/img/femaledoctor2.jpg" alt="Alexa Peter" />
+            </div>
+            <figcaption><h6>Alexa Peter</h6></figcaption>
+            <ul class="speciality">
+              <li>Breast Cancer Surgeon</li>
+              <li>Director, UT, Southwest</li>
+              <li>London</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor7">
+            <div class="doc-img">
+              <img src="/img/maledoctor1.jpg" alt="Trevor Miles" />
+            </div>
+            <figcaption><h6>Trevor Miles</h6></figcaption>
+            <ul class="speciality">
+              <li>Cardiac Surgeon</li>
+              <li>MBBS, MD, FRCP, Fellowship</li>
+              <li>New Delhi, India</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor8">
+            <div class="doc-img">
+              <img src="/img/surgeon.jpg" alt="Matthew Scott" />
+            </div>
+            <figcaption><h6>Matthew Scott</h6></figcaption>
+            <ul class="speciality">
+              <li>Plastic Surgeon</li>
+              <li>Department of Plastic Surgery</li>
+              <li>Dubai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div id="active3" class="inactive">
+        <div class="parent-doc w3-animate-right">
+          <div class="about-doc" id="doctor9">
+            <div class="doc-img">
+              <img src="/img/femaledoctor3.jpg" alt="Paige Ramos" />
+            </div>
+            <figcaption><h6>Paige Ramos</h6></figcaption>
+            <ul class="speciality">
+              <li>Neuro Surgeon</li>
+              <li>Chain Department of Neurological Surgery, Australia</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor10">
+            <div class="doc-img">
+              <img src="/img/maledoctor2.jpg" alt="Joe Adams" />
+            </div>
+            <figcaption><h6>Joe Adams</h6></figcaption>
+            <ul class="speciality">
+              <li>Breast Cancer Surgeon</li>
+              <li>Director, UT, Southwest</li>
+              <li>London</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor11">
+            <div class="doc-img">
+              <img src="/img/maledoctor3.jpg" alt="Joseph Diaz" />
+            </div>
+            <figcaption><h6>Joseph Diaz</h6></figcaption>
+            <ul class="speciality">
+              <li>Cardiac Surgeon</li>
+              <li>MBBS, MD, FRCP, Fellowship</li>
+              <li>New Delhi, India</li>
+            </ul>
+          </div>
+          <div class="about-doc" id="doctor12">
+            <div class="doc-img">
+              <img src="/img/femaledoctor4.jpg" alt="Phyllis Hudson" />
+            </div>
+            <figcaption><h6>Phyllis Hudson</h6></figcaption>
+            <ul class="speciality">
+              <li>Plastic Surgeon</li>
+              <li>Department of Plastic Surgery</li>
+              <li>Dubai</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-circle">
+        <span class="dot" onclick="currentSlide('active1')"></span>
+        <span class="dot" onclick="currentSlide('active2')"></span>
+        <span class="dot" onclick="currentSlide('active3')"></span>
+      </div>
+    </section>
+    <section class="Featured-treatments">
+      <div class="heading-featured">
+        <h1>Featured Medical Treatment</h1>
+        <p>
+          Join the thousands of others who have exercised their rights to
+          quality healthcare at a price you can afford
+        </p>
+      </div>
+      <div class="activated" id="activeid1">
+        <div class="parent-featured">
+          <div class="treatments t1">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg"
+              alt="cancer"
+            />
+            <div class="details">
+              <h6>Cancer</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t2">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--009.jpg"
+              alt="Dentistry"
+            />
+            <div class="details">
+              <h6>Dentistry</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t3">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg"
+              alt="Orthopedics"
+            />
+            <div class="details">
+              <h6>Orthopedics Surgery</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t4">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg"
+              alt="Cardiology"
+            />
+            <div class="details">
+              <h6>Cardiology Treatment</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t5">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--007.jpg"
+              alt="Infertility"
+            />
+            <div class="details">
+              <h6>Infertility Treatment</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t6">
+            <div class="background"></div>
+            <img
+              src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--006.jpg"
+              alt="Multi organ transplant"
+            />
+            <div class="details">
+              <h6>Multi Organ Transplant</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="deactivated" id="activeid2">
+        <div class="parent-featured">
+          <div class="treatments t1">
+            <div class="background"></div>
+            <img src="/img/blood.jpg" alt="blood" />
+            <div class="details">
+              <h6>Blood</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t2">
+            <div class="background"></div>
+            <img src="/img/chemotherapy.jpg" alt="Chemotherapy" />
+            <div class="details">
+              <h6>Chemotherapy</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t3">
+            <div class="background"></div>
+            <img src="/img/vaccine.jpg" alt="Vaccine" />
+            <div class="details">
+              <h6>Vaccine</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t4">
+            <div class="background"></div>
+            <img src="/img/diabetes.jpg" alt="Diabetes" />
+            <div class="details">
+              <h6>Diabetes</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t5">
+            <div class="background"></div>
+            <img src="/img/radiation.jpg" alt="radiation" />
+            <div class="details">
+              <h6>Radiation</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+          <div class="treatments t6">
+            <div class="background"></div>
+            <img src="/img/palliative.jpg" alt="Palliative Care" />
+            <div class="details">
+              <h6>Palliative Care</h6>
+              <p>50+ Specialists</p>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="carousel-circle" id="carousel-treat">
+        <span
+          class="dot activecarousel"
+          onclick="slidechange('activeid1')"
+        ></span>
+        <span class="dot" onclick="slidechange('activeid2')"></span>
+      </div>
+    </section>
+    <section class="services">
+      <h1>Exclusive services</h1>
+      <p>
+        We want you to be comfortable and thus apart from threating you illness,
+        we provide you with other services that you can see
+      </p>
+      <div class="icons">
+        <div class="service-icons" id="travel">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-01.png"
+                alt="travel"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>TRAVEL</h6>
+            </div>
+          </div>
+        </div>
+        <div class="service-icons" id="food">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-02.png"
+                alt="food"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>FOOD</h6>
+            </div>
+          </div>
+        </div>
+        <div class="service-icons" id="accomodation">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-03.png"
+                alt="accomodation"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>ACCOMODATION</h6>
+            </div>
+          </div>
+        </div>
+        <div class="service-icons" id="labs">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-07.png"
+                alt="labs"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>LABS</h6>
+            </div>
+          </div>
+        </div>
+        <div class="service-icons" id="reports">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-10.png"
+                alt="reports"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>REPORTS</h6>
+            </div>
+          </div>
+        </div>
+        <div class="service-icons" id="ambulance">
+          <div class="padd-icon">
+            <div class="icon-image">
+              <img
+                src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Icons-06.png"
+                alt="ambulance"
+              />
+            </div>
+            <div class="icon-info">
+              <h6>AMBULANCE</h6>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  
+
+    <%- include ('./footer.ejs') %>
+    <script src="/js/index.js"></script>
+  </body>
+</html>

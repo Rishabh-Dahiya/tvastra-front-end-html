@@ -1,0 +1,85 @@
+/*------------main-----------------*/
+.querybox {
+  display: flex;
+  flex-direction: column;
+  background-color: var(--light-blue);
+  height: auto;
+  justify-content: center;
+  align-content: center;
+}
+#quote a {
+  color: var(--white);
+}
+form {
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+}
+.queries {
+  display: flex;
+  flex-direction: column;
+  height: auto;
+  background-color: var(--white);
+  margin-right: 1rem;
+  margin-left: 1rem;
+}
+.heading h5 {
+  color: var(--blue);
+  text-align: center;
+  border-bottom: 0.1rem solid var(--grey);
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+}
+.input-box {
+  margin: 0.5rem 1rem;
+}
+.input-box input {
+  margin-bottom: 0rem;
+  border: 0.1rem solid var(--border-grey);
+}
+textarea {
+  border: 0.1rem solid var(--border-grey);
+  margin-left: 1rem;
+  margin-right: 1rem;
+  padding-top: 0.5rem;
+  padding-bottom: 10rem;
+  margin-bottom: 1rem;
+}
+textarea:placeholder-shown {
+  padding-left: 0.5rem;
+}
+.btn {
+  display: flex;
+  justify-content: center;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.btn {
+  display: flex;
+}
+.btn button {
+  width: 100%;
+  padding: 1rem 0rem;
+  margin-bottom: 3rem;
+  letter-spacing: 0.1rem;
+  white-space: nowrap;
+}
+.footer {
+  background-color: var(--light-blue);
+  text-align: center;
+}
+@media only screen and (min-width: 768px) {
+  .queries {
+    margin-left: 10rem;
+    margin-right: 10rem;
+    margin-top: 2.5rem;
+  }
+  .footer {
+    margin-bottom: 3rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .queries {
+    margin-left: 20rem;
+    margin-right: 20rem;
+  }
+}

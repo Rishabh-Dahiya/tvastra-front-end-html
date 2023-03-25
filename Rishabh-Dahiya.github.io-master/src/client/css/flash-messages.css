@@ -1,0 +1,59 @@
+@keyframes fade-out {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+.fade-out {
+  animation-name: fade-out;
+}
+.animated {
+  animation-duration: 10s;
+  animation-fill-mode: both;
+}
+#messages {
+  background-color: var(--white);
+  display: flex;
+  position: absolute;
+  right: 0.1rem;
+  top: 6rem;
+}
+.success {
+  border-left: 0.5rem solid var(--flash-green);
+}
+#messages .success li {
+  color: var(--flash-green);
+  padding: 1.5rem 0.5rem;
+}
+
+.warning {
+  border-left: 0.5rem solid var(--flash-red);
+}
+#messages .warning li {
+  color: var(--flash-red);
+  padding: 1.5rem 0.5rem;
+}
+
+.error {
+  border-left: 0.5rem solid var(--flash-red);
+}
+#messages .error li {
+  color: var(--flash-red);
+  padding: 1.5rem 1rem;
+}
+
+@media only screen and (min-width: 768px) {
+  #messages {
+    right: 0.1rem;
+    top: 7rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  #messages {
+    right: 1rem;
+    top: 5.5rem;
+  }
+}

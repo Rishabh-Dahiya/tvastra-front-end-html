@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link href="/css/appointment.css" type="text/css" rel="stylesheet" />
+    <title>APPOINTMENT</title>
+  </head>
+  <body>
+    <%- include ('./header.ejs') %>
+    <div class="appointmentbox">
+      <div class="details">
+        <form method="POST" action="appointment">
+          <div class="heading"><h5>Book an appointment</h5></div>
+          <div class="choosen-details" id="date">
+            <label for="appointdate"><h6>Select Appointment Date*</h6></label>
+            <input
+              type="date"
+              placeholder="dd/ yy/ mm"
+              id="appointdate"
+              name="appointdate"
+            />
+          </div>
+          <div class="choosen-details">
+            <h6>Time Interval*</h6>
+            <div class="grid">
+              <input
+                id="morning"
+                type="radio"
+                value="morning"
+                name="instance"
+              />
+              <label for="morning">Morning</label>
+            </div>
+            <div class="grid">
+              <input
+                type="radio"
+                value="afternoon"
+                id="afternoon"
+                name="instance"
+              />
+              <label for="afternoon">Afternoon</label>
+            </div>
+            <div class="grid">
+              <input
+                type="radio"
+                id="evening"
+                value="evening"
+                name="instance"
+              />
+              <label for="evening">Evening</label>
+            </div>
+          </div>
+          <div class="choosen-details">
+            <h6>Appointment Status / Urgency*</h6>
+            <div class="grid">
+              <input type="radio" id="routine" value="routine" name="status" />
+              <label for="routine">Routine Check-up</label>
+            </div>
+            <div class="grid">
+              <input
+                type="radio"
+                id="routine"
+                value="non-urgent"
+                name="status"
+              />
+              <label for="non-urgent">Non Urgent Check-up</label>
+            </div>
+            <div class="grid">
+              <input type="radio" id="urgent" value="urgent" name="status" />
+              <label for="urgent">Urgent Check-up</label>
+            </div>
+            <div class="grid">
+              <input
+                type="radio"
+                id="surgical"
+                value="surgical"
+                name="status"
+              />
+              <label for="surgical">Surgical Appointment</label>
+            </div>
+          </div>
+          <div class="choosen-details">
+            <label for="attachment"
+              ><h6>Upload Previous Health Record</h6></label
+            >
+            <input type="file" name="prevrecord" id="prev-record" />
+          </div>
+          <div class="text-area">
+            <label for="appoint-details"><h6>Appointment Details</h6></label>
+            <textarea name="appointdetails" id="appoint-details"></textarea>
+          </div>
+          <div class="appoint-button">
+            <div class="adjust-appoint">
+              <button class="primary-dark" type="submit">
+                <h6>BOOK APPOINTMENT</h6>
+                <i class="fas fa-arrow-right"></i>
+              </button>
+            </div>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div class="footer">
+      <h6>All rights reserved &copy. 2020</h6>
+    </div>
+  </body>
+</html>

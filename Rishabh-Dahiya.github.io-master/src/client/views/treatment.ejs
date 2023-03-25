@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/treatment.css" type="text/css">
+    <link href="/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="/css/theme.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fd1383274.js" crossorigin="anonymous"></script>
+    <title>Treatment</title>
+</head>
+<body>
+    <%- include ('./header.ejs') %>
+            <div class="hero-background">
+                <div class="subject">
+                    <h2>Dentistry</h2>
+                    <p>Home/Dentistry</p>
+                </div>
+            </div>
+            <section class="grid">
+                <div class="vaccination">
+                    <h2>Vaccination</h2>
+                    <div class="vaccination-wrapper">
+                        <div class="vaccine-image">
+                            <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/dentist.jpg" alt="vaccine image">
+                        </div>
+                        <div class="about">
+                            <h5>About Dentist Department</h5>
+                            <p>The vaccination of dentists against various vaccine-preventable infections is the most important meaasure of primary prevention against such diseases which would otherwise prove fatal for both the dentists and their patients</p>
+                            <ul class="injections">
+                                <li>CF-related diabetes (monthly)</li>
+                                <li>Gastrointestinal (monthly)</li>
+                                <li>CF-related liver disease (monthly)</li>
+                                <li>Sweat testing (three times per month)</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="disorders">
+                    <ul>
+                        <li>
+                            <i class="fas fa-stethoscope"></i>
+                            <div class="dname"><h6>Central Nervous Systems</h6></div>
+                            <div class="ddetails">Open visitation with only two visitors in a room at any time. No one under 12 years of age may.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-tablets"></i>
+                            <div class="dname"><h6>Allergic Disorders</h6></div>
+                            <div class="ddetails">Open visitation with only two visitors in a room at any time. No one under 12 years of age may.</div>
+                        </li>
+                        <li>
+                            <i class="fas fa-heartbeat"></i>
+                            <div class="dname"><h6>Neoplastic Disorders</h6></div>
+                            <div class="ddetails">Open visitation with only two visitors in a room at any time. No one under 12 years of age may.</div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="service-wrapper">
+                    <div class="service-details">
+                        <div class="name"><h6>Service Details</h6></div>
+                            <ul>
+                                <li><div class="ques">Price</div><div class="ans">From $340</div></li>
+                                <li><div class="ques">Duration</div> <div class="ans">10 minutes</div></li>
+                                <li><div class="ques">Office</div> <div class="ans">#46</div></li>
+                                <li><div class="ques">Doctor</div> <div class="ans">Dr. Elizabeth Beard</div></li>
+                                <li><div class="ques">Categories</div> <div class="ans">Family Medicine</div></li>
+                            </ul>
+                    </div>
+                    <div class="schedule">
+                        <div class="name"><h6>Schedule</h6></div>
+                        <ul>
+                            <li><div class="date">Tuesday</div><div class="time">10:00am-01:00pm</div></li>
+                            <li><div class="date">Friday</div><div class="time">07:00am-10:00pm</div></li>
+                        </ul>
+                    </div>
+                </div>
+            </section>
+            <section class="other-services">
+                <div class="heading-wrapper">
+                <h2>More Services</h2>
+                    <div class="arrow">
+                        <i class="fas fa-chevron-left"></i><i class="fas fa-chevron-right"></i>  </i>
+                    </div>
+                </div>
+                <div class="services-image">
+                    <div class= "other" id="orthopedics"> 
+                        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--008.jpg" alt="Orthopedics">
+                        <div class="services-name"><h5><a href="orthopedic.ejs">Orthopedic Surgery</a></h5></div>
+                    </div>
+                    <div class= "other" id="cancer">
+                        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--010.jpg" alt="cancer">
+                        <div class="services-name"><h5><a href="Cancer.ejs">Cancer</a></h5></div>
+                    </div>
+                    <div class= "other" id="cardiology">
+                        <img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/image--011.jpg" alt="Cardiology">
+                        <div class="services-name"><h5><a href="cardiology.ejs">Cardiology</a></h5></div>
+                    </div>
+                </div>
+            </section>
+            
+    <%- include ('./footer.ejs') %>
+</body>
+</html>

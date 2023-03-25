@@ -1,0 +1,268 @@
+/*-----------------Main-----------------*/
+.blah{
+  display: none;
+}
+.container{
+  background-color: var(--background-grey);
+  padding-bottom: 0.8rem;
+}
+.form-container{
+  margin: 0.8rem;
+  margin-bottom: 0rem;
+  padding: 0.5rem;
+  background-color: var(--white);
+  border-radius: 0.5rem;
+}
+.dashboard-head{
+  display: flex;
+  margin-left: 0.8rem;
+  padding-top: 1rem;
+  margin-bottom: 1rem;
+}
+.dashboard-head span{
+  font-size: 2rem;
+  color: var(--dark-blue);
+}
+.dashboard-head h5{
+  margin-bottom: 0rem;
+}
+/*----------------inside form-----------*/
+.hero{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 0.1rem solid var(--dark-grey);
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  margin-top: 0.5rem;
+}
+.hero h4{
+  margin-bottom: 0rem;
+}
+/*----------------input----------------*/
+.input-div label{
+  font-family: nexa-bold;
+  color: var(--blue);
+}
+.dash-input{
+  margin-top: 0.5rem;
+  border: 0.1rem solid var(--border-grey);
+}
+.input-div textarea {
+  width: 100%;
+  border: 0.05rem solid var(--grey);
+  margin-top: 0.5rem;
+  margin-bottom : 0.5rem;
+}
+#date{
+  background-color: var(--white);
+}
+/* ---------------HELP------------------*/
+.help {
+    background-color: var(--light-blue);
+  }
+  .secondary {
+    width: 12rem;
+  }
+  /*--------------FOOTER------------------*/
+  .ft-main {
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 0;
+  }
+  .ft-main li {
+    color: var(--grey);
+    padding-bottom: 1rem;
+  }
+  .ft-logo {
+    width: 25vw;
+    width: 25vh;
+  }
+  .social-parent {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-content: center;
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  .fab {
+    padding-right: 1.27rem;
+  }
+  .footer1 p {
+    color: var(--white);
+    font-size: 1rem;
+    word-spacing: 0.2rem;
+    padding-bottom: 1rem;
+  }
+  @media only screen and (min-width: 768px) {
+    .form-container,.dashboard-head{
+      margin-left: 3rem;
+      margin-right: 2.7rem;
+    }
+    .form-container{
+      padding: 1rem;
+    }
+    .basic-container,.address-container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 16rem;
+      align-content: space-between;
+    }
+    .doctor-container{
+      display: flex;
+      flex-direction: column;
+      flex-wrap: wrap;
+      height: 27rem;
+      align-content: space-between;
+    }
+    #date{
+     height: 2.98rem;
+    }
+    .input-div textarea{
+      width: 204%;
+      display: block;
+    }
+    .input-div{
+      width: 49%;
+    }
+      /*----------------help------------------------------------------*/
+  .help {
+    display: flex;
+    flex-direction: column;
+  }
+  .help button {
+    justify-self: center;
+    align-self: center;
+  }
+  /*---------------footer-----------------------------------------*/
+
+  /*---------------footer-tablet-----------------------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-top: 0.5rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  }
+  @media only screen and (min-width: 1024px){
+    .dashboard-head{
+      display: none;
+    }
+    .dashboard-main h5{
+      margin-bottom: 0rem;
+    }
+    .container{
+      margin : 2rem 3rem 2rem 7rem;
+      display: grid;
+      grid-template-columns: repeat(4,1fr);
+      grid-column-gap: 2rem;
+      grid-template-rows: auto;
+      grid-template-areas: 
+      "sidebar main main main";
+    }
+    .blah{
+      display: flex;
+      flex-direction: column;
+      grid-area: sidebar;
+      padding-left: 2rem;
+      padding-top: 3rem;
+    }
+    .dashboard-main{
+      display: flex;
+      align-items: center;
+      margin-bottom: 2rem;
+    }
+    .list-dash li{
+     padding: 1rem 0.5rem 1rem 0.5rem;
+      color: var(--blue);
+    }
+    .list-dash li i{
+      padding-right: 1rem;
+    }
+    .list-dash li:hover{
+      background-color: var(--blue);
+      color: var(--white);
+    }
+    .form-container{
+      grid-area: main;
+      margin: 0rem;
+      margin-top: 1rem;
+     margin-right: 1rem;
+    }
+      /*---------------Submit your query-----------------*/
+  .help-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .help p {
+    text-align: left;
+    margin: 0;
+  }
+
+  /*---------------footer-desktop----------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 p {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  .ft-main {
+    border-bottom: 0.5rem solid var(--blue);
+  }
+  }

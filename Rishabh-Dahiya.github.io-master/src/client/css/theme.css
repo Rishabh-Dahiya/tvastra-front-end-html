@@ -1,0 +1,313 @@
+:root {
+  --light-blue: rgb(148, 190, 221, 1);
+  --lightest-blue: #cce3f0;
+  --dark-blue: #2a2d3e;
+  --white: rgb(255, 255, 255, 1);
+  --offwhite: rgba(245, 245, 245, 255);
+  --blue: rgb(42, 135, 193, 1);
+  --grey: rgb(199, 212, 217, 1);
+  --dark-grey: rgb(189, 189, 189, 1);
+  --white-text: rgb(251, 252, 252);
+  --white-grey: #bbb8b1;
+  --text-grey: rgba(136, 129, 133, 255);
+  --background-grey : #F0F0F5;
+  --border-grey: #f2f1f0;
+  --black: #000000;
+  --green: rgb(0, 100, 0);
+  --box-shadow: rgba(0, 0, 0, 0.2);
+  --flash-red: rgb(255, 5, 3);
+  --flash-green: rgb(92, 166, 64);
+}
+
+@font-face {
+  font-family: "Nexa-Bold";
+  src: url("/font/Nexa-Bold.otf");
+}
+
+@font-face {
+  font-family: "Nexa-Light";
+  src: url("/font/Nexa-Light.otf");
+}
+* {
+  box-sizing: border-box;
+}
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.5rem;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin-bottom: 0.625rem;
+  font-family: "Nexa-Bold";
+}
+h1 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--dark-blue);
+}
+h2 {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  text-align: center;
+  color: var(--white);
+}
+h3 {
+  font-size: 1.6rem;
+  line-height: 1.8rem;
+}
+h4 {
+  font-size: 1.4rem;
+  line-height: 1.6rem;
+}
+h5 {
+  font-size: 1.2rem;
+  line-height: 1.4rem;
+}
+h6 {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--dark-blue);
+}
+
+img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+section {
+  display: flex;
+  padding: 2rem 1rem;
+  flex-direction: column;
+  text-align: center;
+}
+p {
+  font-family: "Nexa-Light";
+  font-size: 1rem;
+  line-height: 1.2rem;
+  margin-bottom: 1rem;
+  color: var(--dark-blue);
+}
+input,
+select {
+  font-family: "Nexa-Light";
+  width: 100%;
+  font-size: 0.9rem;
+  line-height: 1.2rem;
+  margin-bottom: 0.625rem;
+  padding: 0.8rem 0.75rem;
+  border: none;
+}
+textarea {
+  font-size: 0.9rem;
+  font-family: nexa-light;
+  line-height: 1.2rem;
+}
+select:hover,
+select:focus,
+input:hover,
+input:focus,
+textarea:focus {
+  outline: none;
+}
+input::placeholder,
+select::placeholder {
+  display: inline-block;
+  font-size: 0.9rem;
+  color: var(--text-grey);
+  text-overflow: ellipsis;
+}
+
+button {
+  font-family: "Nexa-Light";
+  font-size: 1rem;
+  border: none;
+}
+.primary-login,
+.primary-quote {
+  padding: 0.7rem 1.3rem;
+  border-radius: 0.2rem;
+}
+.primary-login {
+  background-color: var(--white);
+  border: 0.1rem solid var(--dark-blue);
+  margin-right: 0.5rem;
+}
+.primary-quote {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  border: 0.1rem solid var(--dark-blue);
+}
+.primary-dark {
+  color: var(--white);
+  background-color: var(--dark-blue);
+}
+.primary-light {
+  color: var(--white);
+  background-color: var(--blue);
+  border-radius: 0.1rem;
+  padding: 0.8rem 0.5rem 0.8rem;
+}
+.primary-use {
+  color: var(--white);
+  background-color: var(--dark-blue);
+  padding: 0.5rem 5rem;
+  margin-bottom: 1.5rem;
+}
+option {
+  font-size: 0.9rem;
+}
+
+figure {
+  margin: 1.25rem 0;
+}
+span {
+  font-family: "Nexa-Bold";
+  font-size: 1rem;
+  line-height: 1.2rem;
+  color: var(--blue);
+  padding-left: 0.0625rem;
+  padding-right: 0.625rem;
+}
+ul li,
+ol li {
+  font-size: 1rem;
+  line-height: 1.2rem;
+  font-family: "Nexa-Light";
+  color: var(--dark-blue);
+}
+
+a {
+  text-decoration: none;
+  color: var(--white);
+}
+
+label {
+  font-family: "Nexa-Light";
+  font-size: 1rem;
+}
+figcaption {
+  font-size: 1.2rem;
+  color: var(--blue);
+  padding-top: 0.625rem;
+}
+
+footer {
+  background-color: var(--dark-blue);
+  color: var(--white);
+  text-align: center;
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+    line-height: 1.8rem;
+  }
+  h5 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  section {
+    padding: 2rem 3rem;
+    display: flex;
+  }
+
+  p {
+    font-size: 1.1rem;
+    line-height: 1.2rem;
+    margin-bottom: 1rem;
+  }
+  input,
+  select {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  button {
+    font-size: 1rem;
+  }
+  li {
+    font-size: 1.1rem;
+    line-height: 1.3rem;
+  }
+}
+
+@media only screen and (min-width: 1024px) {
+  h1,
+  h2 {
+    font-size: 2rem;
+    line-height: 2.2rem;
+    text-align: left;
+  }
+
+  h3 {
+    font-size: 1.8rem;
+    line-height: 2rem;
+  }
+  h4 {
+    font-size: 1.6rem;
+    line-height: 1.8rrem;
+  }
+  h5 {
+    font-size: 1.4rem;
+    line-height: 1.6rem;
+  }
+  h6 {
+    font-size: 1.2rem;
+    line-height: 1.4rem;
+  }
+  section {
+    padding: 3rem 7rem;
+  }
+  p {
+    font-size: 1rem;
+    line-height: 1.6rem;
+    margin-bottom: 2rem;
+    font-weight: bold;
+  }
+  input,
+  select {
+    font-size: 1rem;
+    line-height: 1.2rem;
+  }
+  button {
+    font-size: 0.8rem;
+    font-weight: bold;
+  }
+  li {
+    font-size: 1rem;
+    line-height: 1.3rem;
+    font-weight: bold;
+  }
+  span {
+    font-size: 2rem;
+    line-height: 2rem;
+  }
+  .primary-use {
+    padding: 1rem 6rem;
+  }
+  .primary-light {
+    padding: 1rem 3rem;
+  }
+}

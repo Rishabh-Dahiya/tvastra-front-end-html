@@ -1,0 +1,501 @@
+:root {
+  --light-blue: rgb(148, 190, 221, 1);
+  --dark-blue: rgb(34, 38, 63, 1);
+  --white: rgb(255, 255, 255, 1);
+  --blue: rgb(42, 135, 193, 1);
+  --grey: rgb(199, 212, 217, 1);
+  --dark-grey: rgb(189, 189, 189, 1);
+  --white-text: rgb(251, 252, 252);
+}
+
+/*-----------Hero----------------*/
+.hero-2 {
+  display: none;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem 1rem 0rem;
+  align-items: center;
+}
+.hero h5 {
+  text-align: left;
+  font-family: "Nexa-light";
+  width: 12rem;
+  margin-bottom: 0rem;
+}
+
+#sort-by {
+  background-color: var(--dark-grey);
+  width: 6.5rem;
+  text-align: center;
+  margin-bottom: 0rem;
+}
+/*----------main-----------------------*/
+.filter-grid {
+  display: none;
+}
+.parent-container {
+  border: 0.1rem solid var(--dark-grey);
+  margin-bottom: 1rem;
+}
+.fa-ul {
+  text-align: left;
+}
+.info-first h5 {
+  text-align: left;
+  color: var(--blue);
+  padding-top: 1rem;
+  padding-bottom: 0.7rem;
+}
+.fa-ul li {
+  padding-bottom: 0.7rem;
+  margin-left: 1rem;
+}
+.fa-ul i {
+  color: var(--blue);
+}
+.info-first h5::before {
+  display: inline-block;
+  content: "";
+  border-bottom: 0.17rem solid var(--blue);
+  padding-left: 1.75rem;
+  vertical-align: 0.3rem;
+  margin-right: 0.5rem;
+}
+.info-first button {
+  font-size: 0.9rem;
+}
+.call-now {
+  display: flex;
+  justify-content: center;
+}
+.options {
+  display: flex;
+  flex-wrap: wrap;
+  padding-left: 1.5rem;
+  padding-bottom: 1.5rem;
+}
+.option-available {
+  display: flex;
+  border: 0.1rem solid var(--dark-grey);
+  border-radius: 1rem;
+  font-size: 0.9rem;
+  padding: 0.5rem;
+  margin-right: 0.2rem;
+  margin-bottom: 0.2rem;
+}
+
+.option-available {
+  font-family: nexa-light;
+}
+/* ---------------HELP------------------*/
+.help {
+  background-color: var(--light-blue);
+}
+.secondary {
+  width: 12rem;
+}
+/*--------------FOOTER------------------*/
+/*--------------FOOTER------------------*/
+.ft-main {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.ft-main li {
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+.ft-logo {
+  width: 25vw;
+  width: 25vh;
+}
+.social-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.fab {
+  padding-right: 1.27rem;
+}
+.footer1 p {
+  color: var(--white);
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  .hero h5 {
+    width: 15rem;
+  }
+  .hero {
+    padding: 2rem 3rem 1rem;
+  }
+  #sort-by {
+    width: 10rem;
+  }
+  .parent-container {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    margin-bottom: 1rem;
+  }
+
+  .fa-ul {
+    display: grid;
+    grid-template-columns: 30% auto;
+    grid-template-rows: 50% auto;
+    grid-row-gap: 1rem;
+    grid-column-gap: 4rem;
+  }
+  .fa-ul li {
+    padding-bottom: 1rem;
+  }
+  .fa-ul li:nth-child(2) {
+    align-self: center;
+  }
+  .fa-ul:last-child {
+    grid-column: 2/4;
+  }
+  .fa-ul li:nth-child(3) {
+    padding-bottom: 0rem;
+  }
+  .options {
+    padding-bottom: 3rem;
+  }
+  .option-available {
+    font-size: 1rem;
+  }
+  /*-----------------alignment------------------------------------*/
+  .call-now {
+    justify-content: start;
+    margin-left: 2rem;
+  }
+  .alignment {
+    display: flex;
+    flex-direction: column;
+  }
+  .fa-ul {
+    width: 26rem;
+  }
+  /*----------------help------------------------------------------*/
+  .help {
+    display: flex;
+    flex-direction: column;
+  }
+  .help button {
+    justify-self: center;
+    align-self: center;
+  }
+  /*---------------footer-----------------------------------------*/
+
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    justify-content: space-between;
+    align-content: center;
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+
+  .ft-logo {
+    height: 2rem;
+    width: 11rem;
+    float: right;
+    align-self: center;
+    padding-right: 1rem;
+  }
+  .foot-li li {
+    display: inline;
+    padding-left: 1rem;
+    color: var(--dark-blue);
+  }
+  .foot-list {
+    align-self: center;
+  }
+
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100vw;
+    justify-content: space-between;
+    padding-left: 2rem;
+  }
+  .ft-final p {
+    color: var(--dark-blue);
+  }
+  .footer1 p {
+    color: var(--dark-blue);
+    letter-spacing: normal;
+    padding: 1rem;
+    word-spacing: 0.2rem;
+  }
+  .parent-social {
+    align-self: center;
+    padding-right: 2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .background {
+    background-image: linear-gradient(
+        to bottom,
+        rgba(168, 197, 236, 0.85),
+        rgba(168, 197, 236, 0.85)
+      ),
+      url(../images/inside-hospital-web.jpg);
+    background-size: cover;
+    background-position: center;
+    padding: 8rem 1rem;
+  }
+  .background a {
+    font-family: nexa-bold;
+  }
+  .hero {
+    padding: 2rem 5rem 1.5rem;
+  }
+  .hero-2 {
+    display: block;
+    padding: 0;
+  }
+  .treatments h3 {
+    font-family: nexa-light;
+    text-align: left;
+    padding-left: 6.3rem;
+  }
+  .treatments a {
+    color: black;
+    text-decoration: underline;
+  }
+  #sort-by {
+    font-size: 1.1rem;
+  }
+  .filter-grid {
+    display: inline-block;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 30% 70%;
+    grid-column-gap: 1rem;
+    margin: 3rem 7rem;
+  }
+  .fa-ul {
+    grid-template-columns: 70% auto;
+  }
+  .fa-ul li:nth-child(2) {
+    white-space: nowrap;
+  }
+  .fa-ul span {
+    font-size: 1.2rem;
+    line-height: 1.6rem;
+  }
+  .fa-ul li {
+    padding-bottom: 1rem;
+    font-size: 1.1rem;
+  }
+  #sort-by {
+    font-size: 1.1rem;
+    width: 8rem;
+    margin-right: 0.5rem;
+  }
+  .hero {
+    padding: 3rem 7rem 0rem;
+  }
+  .hero h5 {
+    margin-left: 0.5rem;
+  }
+  .main {
+    display: grid;
+    grid-template-columns: 25% 74%;
+    grid-column-gap: 1rem;
+    padding: 0rem;
+  }
+  #filter-by {
+    display: flex;
+    background-color: var(--border-grey);
+    font-size: 1rem;
+    font-family: nexa-bold;
+    padding: 1rem 1rem 1rem;
+    margin-right: 1rem;
+  }
+  /*-------------------icons---------------------*/
+  .grid1 .fa-search {
+    padding-left: 4rem;
+    padding-right: 1rem;
+  }
+  .grid2 .fa-search {
+    padding-left: 4.2rem;
+    padding-right: 1rem;
+  }
+  .grid3 .fa-search {
+    padding-left: 2rem;
+    padding-right: 1rem;
+  }
+  .grid {
+    display: flex;
+  }
+
+  .fa-search {
+    color: var(--blue);
+  }
+  .fa-minus {
+    color: var(--grey);
+  }
+  .fa-times {
+    color: var(--blue);
+    padding-left: 0.5rem;
+  }
+  .specification {
+    padding: 1rem 0rem 0rem;
+  }
+  .grid h6 {
+    padding-right: 4rem;
+    padding-left: 1rem;
+  }
+  .grid2 h6 {
+    padding-right: 3rem;
+  }
+  .filter-flex label {
+    padding-left: 1rem;
+    padding-bottom: 0.5rem;
+    text-align: left;
+  }
+  .filter-flex input {
+    margin: 0rem;
+    width: 1rem;
+  }
+  .filter-flex {
+    display: flex;
+    padding-left: 0.8rem;
+  }
+  #show {
+    float: left;
+    color: var(--blue);
+    padding-left: 1rem;
+  }
+
+  .show {
+    padding-bottom: 2rem;
+    padding-top: 1rem;
+  }
+  /*-----------------inside---------------------*/
+
+  .figure-hospital {
+    height: 100%;
+  }
+  .info-first h5::before {
+    width: 1.5rem;
+  }
+  .parent-container {
+    display: grid;
+    grid-template-columns: 70% auto;
+    margin-bottom: 1rem;
+    grid-column-gap: 2rem;
+  }
+  .fa-ul {
+    column-count: 2;
+    column-gap: 3rem;
+    padding-bottom: 1rem;
+    margin-left: 4rem;
+    margin-right: 0rem;
+  }
+  .fa-ul li {
+    padding-bottom: 1rem;
+  }
+  #years i {
+    padding-top: 2.7rem;
+  }
+  .info-first h5 {
+    padding-top: 2rem;
+  }
+  .options {
+    display: flex;
+    padding-left: 4rem;
+    padding-bottom: 1.5rem;
+  }
+  .option-available {
+    text-align: center;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    margin-bottom: 0.5rem;
+    margin-right: 0.2rem;
+  }
+  #booking {
+    margin-left: 2rem;
+  }
+  #colored-option {
+    background-color: var(--border-grey);
+  }
+  /*---------------Submit your query-----------------*/
+  .help-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .help p {
+    text-align: left;
+    margin: 0;
+  }
+
+  /*---------------footer-desktop----------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .ft-logo {
+    padding-right: 0;
+  }
+  .foot-li li:first-of-type {
+    padding-left: 0rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+  }
+  .footer1 p {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+    padding-left: 0rem;
+    padding-top: 0rem;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 0rem;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  .ft-main {
+    border-bottom: 0.5rem solid var(--blue);
+  }
+  .parent-social {
+    padding-right: 0rem;
+    align-self: center;
+  }
+}

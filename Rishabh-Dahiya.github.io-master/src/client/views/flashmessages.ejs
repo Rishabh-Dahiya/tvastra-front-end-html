@@ -1,0 +1,11 @@
+<script src="/js/index.js"></script>
+<link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+<div id="messages" class="fade-out animated">
+  <% Object.keys(messages).forEach(function (type) { %>
+  <ul id="idc" class="<%= type %>">
+    <% messages[type].forEach(function (message) { %>
+    <li><%= message %></li>
+    <% }) %>
+  </ul>
+  <% }) %>
+</div>

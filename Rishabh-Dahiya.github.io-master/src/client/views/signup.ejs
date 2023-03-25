@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="/css/theme.css" type="text/css" rel="stylesheet">
+    <link href="/css/signup.css" type="text/css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css">
+    <script src="https://kit.fontawesome.com/4fd1383274.js" crossorigin="anonymous"></script>
+    <title>Sign up</title>
+</head>
+<body>
+    <nav class="nav-bar">
+        <figure class="logo">
+            <a href="index.ejs"><img src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg" alt="tvastra logo"></a>
+         </figure>
+         <div class="icon">
+             <i class="fas fa-bars"></i>
+         </div>
+         <div class="nav-mobile nav-desktop">
+             <div class="menu">
+                 <ul >
+                     <li><a href="./doctor.ejs">Doctor</a></li>
+                     <li><a href="./hospital.ejs">Hospitals</a></li>
+                     <li><a href="./treatment.ejs">Treatment</a></li>
+                     <li><a href="./healthy.ejs">Other Services</a></li>
+                     <li><a href="./tvastra-plus.ejs">About</a></li>
+                 </ul>
+             </div>
+             <div class="menu-buttons">
+                <button class="primary-quote" id="quote"><a href="contactus.ejs">Get a Quote</a></button>
+            </div>
+        </div>
+        </nav>  
+        <%- include ('./flashmessages.ejs') %>
+        <form action="/signup" method="POST" id="signupform">
+        <div class="signupbox">
+            <div class="credentials">
+                <div class="heading">
+                    <h5>Sign Up</h5>
+              
+                </div>
+                <div id="fname"  class="input-edit"><input name="name" placeholder="Enter Name" type="text" required></div>
+                <div id="mail" class="input-edit"><input name="email" placeholder="Enter Email" type="email" required></div>
+                <div id="pass" class="input-edit"><input name="password" placeholder="Enter Password" type="password" required></div>
+                <div id="sex" class="input-edit">
+                <select id="gender" name="gender" required>
+                    <option>Select your gender</option>
+                    <option>Male</option>
+                    <option>Female</option>
+                    <option>Other</option>
+                <select>
+                </div>
+                <div id="age" class="input-edit"><input type="date" placeholder="dd / mm /yyyy" name="dateofbirth" required> </div>
+                <div id="number" class="input-edit"><input type="number" placeholder="Enter Phone Number" name="number" required></div>
+                <div id="place" ><div class="input-edit" id="city"><input type="text" name="city" placeholder="Enter City" required></div><div class="input-edit" id="state"><input type="text" name="state" placeholder="Enter your state"></div>
+                </div>
+                <div id="region" class="input-edit"><input name="country" list="country" placeholder="Select Your country" required>
+                <datalist id="country">
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                    <option value=""></option>
+                </datalist>
+                </div>
+                <div class="doctor">
+                    <label for="isdoctor">Is Doctor</label>
+                    <input type="checkbox" name="isdoctor" id="isdoctor" value="true"></div>
+                <div class="su-button">
+                    <button type = "submit" class ="primary-dark" id="signup-btn"><h6>SIGN UP</h6></button>
+                    <i class="fas fa-arrow-right"></i>
+                </div>
+                <p>Already Registered? <a class = "signupanchor"href="./login.ejs">Login</a></p>
+            </div>
+        </div>
+    </form>
+    <div class="footer">
+        <h6>All rights reserved &copy. 2020</h6>
+    </div>    
+</body>
+</html>

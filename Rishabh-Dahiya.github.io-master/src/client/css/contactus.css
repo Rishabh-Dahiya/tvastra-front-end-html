@@ -1,0 +1,219 @@
+/*----------------------------Hero------------------------------*/
+.hero-background {
+  display: flex;
+  background: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+  background-size: cover;
+  padding: 5rem 1rem;
+  background-position: center;
+  justify-content: center;
+  text-align: center;
+}
+.subject p {
+  color: var(--white);
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+.map {
+  height: 15rem;
+}
+/*--------------Main--------------------*/
+.contact-details {
+  margin-top: 2rem;
+}
+.contact-info {
+  display: flex;
+  align-items: center;
+  margin-top: 1rem;
+}
+.contact-info i {
+  color: var(--blue);
+}
+.detail h6 {
+  margin-bottom: 0rem;
+  padding-bottom: 0.3rem;
+}
+.detail {
+  padding-left: 1rem;
+  text-align: left;
+  margin-bottom: 1rem;
+  align-items: center;
+}
+/*-------------------Form----------------------*/
+.contact-form {
+  background-color: var(--light-blue);
+}
+.form-grid {
+  padding: 1rem;
+}
+textarea {
+  padding: 0rem 3rem;
+}
+.btn {
+  display: flex;
+  justify-content: flex-end;
+}
+.btn button {
+  margin-right: 1rem;
+  margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+.secondary-info {
+  font-family: nexa-light;
+}
+/*--------------FOOTER------------------*/
+.ft-main {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.ft-main li {
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+.ft-logo {
+  width: 25vw;
+  width: 25vh;
+}
+.social-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.fab {
+  padding-right: 1.27rem;
+}
+.footer1 p {
+  color: var(--white);
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  /*--------------------main--------------------------------------*/
+  .contact-details {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+  /*-----------------------grid---------------------------------*/
+  .form-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(3, 1fr);
+    grid-column-gap: 1rem;
+  }
+  #email {
+    grid-row: 2/3;
+    grid-column: 1/2;
+  }
+  #subject {
+    grid-column: 1/2;
+    grid-row: 3/4;
+  }
+  #message {
+    grid-row: 1/4;
+  }
+  #message input {
+    padding: 4rem 0.5rem 4.4rem;
+    margin: 0;
+  }
+
+  /*---------------footer-----------------------------------------*/
+
+  /*---------------footer-tablet-----------------------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-top: 0.5rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  .map {
+    height: 25rem;
+  }
+  /*------------------Main----------------------------*/
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    margin-top: 2rem;
+    grid-column-gap: 4rem;
+    padding-bottom: 2rem;
+    border-bottom: 0.1rem solid var(--border-grey);
+  }
+  .main {
+    padding-bottom: 0rem;
+  }
+  .contact-details {
+    flex-direction: column;
+    margin-top: 0rem;
+  }
+  /*---------------footer----------------------------*/
+  /*---------------footer-desktop----------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 p {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  .ft-main {
+    border-bottom: 0.5rem solid var(--blue);
+  }
+}

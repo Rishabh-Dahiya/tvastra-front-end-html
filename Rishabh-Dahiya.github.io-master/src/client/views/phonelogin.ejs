@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link href="/css/phone-login.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>phone</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <figure class="logo">
+        <a href="index.ejs"
+          ><img
+            src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+            alt="tvastra logo"
+        /></a>
+      </figure>
+      <div class="icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-mobile nav-desktop">
+        <div class="menu">
+          <ul>
+            <li><a href="./doctor.ejs">Doctor</a></li>
+            <li><a href="./hospital.ejs">Hospitals</a></li>
+            <li><a href="./treatment.ejs">Treatment</a></li>
+            <li><a href="./healthy.ejs">Other Services</a></li>
+            <li><a href="./tvastra-plus.ejs">About</a></li>
+          </ul>
+        </div>
+        <div class="menu-buttons">
+          <button class="primary-quote" id="quote">
+            <a href="contactus.ejs">Get a Quote</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <%- include ('./flashmessages.ejs') %>
+    <form method="post" action="/otp/12345" id="phoneform">
+      <div class="phonebox">
+        <div class="credentials">
+          <div class="heading">
+            <h5>Login</h5>
+          </div>
+          <div class="userid">
+            <input
+              name="phonenum"
+              type="text"
+              placeholder="Enter phone"
+              pattern="[0-9]{10}"
+            />
+          </div>
+          <div class="resend">
+            <p><a href="./login.ejs">Login with password</a></p>
+          </div>
+          <div class="ph-button">
+            <button class="primary-dark" type="submit"><h6>Login</h6></button>
+            <i class="fas fa-arrow-right"></i>
+          </div>
+          <p>
+            Not Registered?
+            <a class="loginanchor" href="./signUp.ejs">Sign Up</a>
+          </p>
+        </div>
+      </div>
+    </form>
+    <div class="footer">
+      <h6>All rights reserved &copy. 2020</h6>
+    </div>
+  </body>
+</html>

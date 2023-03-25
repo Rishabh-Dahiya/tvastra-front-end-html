@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="/css/reset.css" type="text/css" rel="stylesheet" />
+    <link href="/css/theme.css" type="text/css" rel="stylesheet" />
+    <link href="/css/doctor-signup.css" type="text/css" rel="stylesheet" />
+    <link href="/css/signup.css" type="text/css" rel="stylesheet" />
+    <link rel="stylesheet" href="/css/flash-messages.css" type="text/css" />
+    <script
+      src="https://kit.fontawesome.com/4fd1383274.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.css"
+    />
+    <script src="https://cdn.jsdelivr.net/npm/@yaireo/tagify@3.1.0/dist/tagify.min.js"></script>
+
+    <title>Doctor Sign up</title>
+  </head>
+  <body>
+    <nav class="nav-bar">
+      <figure class="logo">
+        <a href="index.ejs"
+          ><img
+            src="https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/Logo.jpg"
+            alt="tvastra logo"
+        /></a>
+      </figure>
+      <div class="icon">
+        <i class="fas fa-bars"></i>
+      </div>
+      <div class="nav-mobile nav-desktop">
+        <div class="menu">
+          <ul>
+            <li><a href="./doctor.ejs">Doctor</a></li>
+            <li><a href="./hospital.ejs">Hospitals</a></li>
+            <li><a href="./treatment.ejs">Treatment</a></li>
+            <li><a href="./healthy.ejs">Other Services</a></li>
+            <li><a href="./tvastra-plus.ejs">About</a></li>
+          </ul>
+        </div>
+        <div class="menu-buttons">
+          <button class="primary-quote" id="quote">
+            <a href="contactus.ejs">Get a Quote</a>
+          </button>
+        </div>
+      </div>
+    </nav>
+    <%- include ('./flashmessages.ejs') %>
+    <form action="/uploadcv" method="POST" >
+      <div class="form-container">
+        <div class="heading">
+          <h4>Welcome</h4>
+          <p>Complete your profile to access site</p>
+        </div>
+
+        <div class="form-input">
+          <div class="label-input">
+            <label for="description">Describe Yourself</label>
+            <textarea
+              name="description"
+              id="description"
+              rows="2"
+              placeholder="Describe yourself ..."
+              required
+            ></textarea>
+          </div>
+          <div class="label-input">
+            <label for="filename">Upload your profile picture</label>
+            <input type="file" id="filename" class="input-class" name="image" />
+          </div>
+          <div class="label-input">
+            <label for="hospital">Your Hospital</label>
+            <input name="hospital" id="hospital" class="input-class" required />
+          </div>
+          <div class="label-input">
+            <label for="achievement">Achievements</label>
+            <input
+              name="achievement"
+              class="input-class"
+              id="achievement"
+              required
+            />
+          </div>
+          <div class="label-input">
+            <label for="experience">Years of experience</label>
+            <input
+              name="experience"
+              class="input-class"
+              id="experience"
+              required
+            />
+          </div>
+          <div class="label-input">
+            <label for="qualification">Qualifications</label>
+            <input
+              name="qualification"
+              class="input-class"
+              id="qualification"
+              required
+            />
+          </div>
+          <div class="label-input">
+            <label for="treatment">Specialization</label
+            ><input
+              name="treatment"
+              id="treatment"
+              class="input-class"
+            />
+          </div>
+          <div class="label-input">
+            <label for="awards">Awards</label
+            ><input name="awards" id="awards" class="input-class" />
+          </div>
+          <div class="label-input">
+            <label for="specialization">Specialization</label
+            ><input
+              name="specialization"
+              id="specialization"
+              class="input-class"
+            />
+          </div>
+          <div class="label-input">
+            <label for="fees">Your average Fees</label
+            ><input name="fees" id="fees" class="input-class" type="number" />
+          </div>
+        </div>
+        <div class="su-button">
+          <button type="submit" class="primary-dark" id="signup-btn">
+            <h6>SIGN UP</h6>
+          </button>
+          <i class="fas fa-arrow-right"></i>
+        </div>
+      </div>
+    </form>
+    <div class="footer" id="footer-doc">
+      <h6>All rights reserved &copy. 2020</h6>
+    </div>
+  </body>
+</html>

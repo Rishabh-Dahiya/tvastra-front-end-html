@@ -1,0 +1,197 @@
+/*----------------------------Hero------------------------------*/
+.hero-background {
+  display: flex;
+  background: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+  background-size: cover;
+  padding: 5rem 1rem;
+  background-position: center;
+  justify-content: center;
+  text-align: center;
+}
+.subject p {
+  color: var(--white);
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+/*--------------------------- Accordian -----------------------*/
+/*---------------------------Main-----------------------------*/
+.questions {
+  display: flex;
+  justify-content: space-between;
+  text-align: left;
+  color: var(--blue);
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  transition: 0.4s;
+}
+.active,
+.questions:hover {
+  background-color: var(--lightest-blue);
+}
+.anwsers {
+  text-align: left;
+  background-color: var(--lightest-blue);
+  padding: 1rem 0rem 1rem 1rem;
+  display: none;
+  overflow: hidden;
+}
+.anwsers p {
+  margin-bottom: 0rem;
+  color: var(--text-grey);
+}
+#last-anwser {
+  margin-bottom: 0rem;
+}
+.wrapper h5 {
+  margin-bottom: 0rem;
+}
+/* ---------------HELP------------------*/
+.help {
+  background-color: var(--light-blue);
+}
+.secondary {
+  width: 12rem;
+}
+/*--------------FOOTER------------------*/
+.ft-main {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.ft-main li {
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+.ft-logo {
+  width: 25vw;
+  width: 25vh;
+}
+.social-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.fab {
+  padding-right: 1.27rem;
+}
+.footer1 p {
+  color: var(--white);
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  /*--------------------Main--------------------*/
+  .questions {
+    margin-bottom: 0.5rem;
+  }
+  .anwsers {
+    margin-bottom: 2.5rem;
+  }
+  /*----------------help------------------------------------------*/
+  .help {
+    display: flex;
+    flex-direction: column;
+  }
+  .help button {
+    justify-self: center;
+    align-self: center;
+  }
+  /*---------------footer-tablet-----------------------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-top: 0.5rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /*------------------------Main-------------------------*/
+  .subject h2 {
+    text-align: center;
+  }
+  /*---------------Submit your query-----------------*/
+  .help-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .help p {
+    text-align: left;
+    margin: 0;
+  }
+  .help button {
+    padding: 1rem 2rem;
+    white-space: nowrap;
+  }
+  /*---------------footer-desktop----------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 p {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  .ft-main {
+    border-bottom: 0.5rem solid var(--blue);
+  }
+}

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="/css/reset.css" type="text/css" rel="stylesheet">
+    <link href="/css/theme.css" type="text/css" rel="stylesheet">
+    <link href="/css/query.css" type="text/css" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/4fd1383274.js" crossorigin="anonymous"></script>
+    <title>Query</title>
+</head>
+<body>
+    <%- include ('./header.ejs') %>
+    <%- include ('./flashmessages.ejs') %>
+        </nav>  
+        <div class="querybox">
+            <form method="POST" action="/askquery">
+                <div class="queries">
+                    <div class="heading">
+                        <h5>Submit your query</h5>
+                    </div>
+                    <div class="input-box mobile">
+                        <input type="text" name="name" id="name" placeholder="Enter Name">
+                    </div>
+                    <div class="input-box mobile">
+                        <input type="tel" name="number" id="mobile-number" placeholder="Enter Phone Number">
+                    </div>
+                    <div class="input-box">
+                        <input type="email" name="email" id="email" placeholder="Enter Email">
+                    </div>
+                    <textarea name="query" id="query" placeholder="Write your query here"></textarea>
+                    <div class="btn">
+                        <button class="primary-dark" type="submit">SUBMIT<i class="fas fa-arrow-right"></i></button>
+                    </div>
+                    </div>
+            </form>
+            <div class="footer">
+                <h6>All rights reserved &copy. 2020</h6>
+            </div>
+        </div>
+</body>
+</html>

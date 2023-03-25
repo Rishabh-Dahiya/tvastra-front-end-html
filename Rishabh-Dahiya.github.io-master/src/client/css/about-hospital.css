@@ -1,0 +1,322 @@
+/*----------------------------Hero------------------------------*/
+.hero-background {
+  display: flex;
+  background: url("https://s3.ap-south-1.amazonaws.com/appdev.konfinity.com/css/tasks/img1.jpg");
+  background-size: cover;
+  padding: 5rem 1rem;
+  background-position: center;
+  justify-content: center;
+  text-align: center;
+}
+.subject p {
+  color: var(--white);
+  padding-top: 1rem;
+  font-size: 1.1rem;
+}
+/*---------------------------Main----------------------------------*/
+.wrapper {
+  border: 0.1rem solid var(--border-grey);
+}
+.hospital-profile {
+  padding: 1rem;
+  margin-bottom: 2rem;
+}
+#booking {
+  margin-top: 0.5rem;
+  padding: 0.5rem 2.9rem;
+  white-space: nowrap;
+}
+
+.about-hospital h2 {
+  color: var(--blue);
+  text-align: left;
+  margin-bottom: 1rem;
+}
+.about-hospital p {
+  text-align: left;
+  padding-left: 1rem;
+  margin-bottom: 2rem;
+}
+.about-hospital h2::before {
+  display: inline-block;
+  content: "";
+  border-bottom: 0.15rem solid var(--blue);
+  width: 2.5rem;
+  vertical-align: middle;
+  margin-right: 0.5rem;
+}
+.fa-ul li {
+  text-align: left;
+  padding-bottom: 1rem;
+}
+.fa-li {
+  padding-right: 1rem;
+}
+.desc-heading {
+  display: grid;
+  grid-template-columns: 10% 80% 10%;
+  color: var(--blue);
+  align-items: center;
+  transition: 0.4s;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+}
+
+.desc-heading h4 {
+  margin-bottom: 0rem;
+  white-space: nowrap;
+  text-align: left;
+}
+.desc {
+  text-align: left;
+  padding-left: 0.5rem;
+  padding-right: 0.5rem;
+}
+.desc-paragraph p {
+  margin-bottom: 0rem;
+  padding-bottom: 0.5rem;
+}
+.desc-paragraph {
+  padding-left: 0.5rem;
+  background-color: var(--lightest-blue);
+  padding-top: 0.5rem;
+}
+.profile-desc li {
+  margin-bottom: 1rem;
+}
+/* ---------------HELP------------------*/
+.help {
+  background-color: var(--light-blue);
+}
+.secondary {
+  width: 12rem;
+}
+/*--------------FOOTER------------------*/
+.ft-main {
+  align-items: center;
+  justify-content: center;
+  padding-bottom: 0;
+}
+.ft-main li {
+  color: var(--grey);
+  padding-bottom: 1rem;
+}
+.ft-logo {
+  width: 25vw;
+  width: 25vh;
+}
+.social-parent {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-content: center;
+  margin-top: 0.5rem;
+  margin-bottom: 1rem;
+}
+.fab {
+  padding-right: 1.27rem;
+}
+.footer1 p {
+  color: var(--white);
+  font-size: 1rem;
+  word-spacing: 0.2rem;
+  padding-bottom: 1rem;
+}
+@media only screen and (min-width: 768px) {
+  /*----------------Hero------------------*/
+  .hero-background {
+    padding: 7rem 1rem;
+  }
+  /*---------------------Main-----------------*/
+  .hospital-image {
+    height: 10rem;
+    width: 15rem;
+  }
+  .hospital-image img {
+    height: 100%;
+    object-fit: cover;
+  }
+  .about-hospital h2::before {
+    display: inline-block;
+    content: "";
+    border-bottom: 0.15rem solid var(--blue);
+    width: 1rem;
+    vertical-align: middle;
+    margin-right: 0.5rem;
+  }
+  .about-hospital h2 {
+    margin-top: 1rem;
+  }
+  #booking {
+    padding-right: 2rem;
+  }
+  /*------------------------Grid-------------------*/
+
+  .wrapper {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 20% 2% auto;
+    grid-template-areas:
+      "about-hosp pic"
+      "about-hosp ."
+      "description .";
+  }
+
+  .hospital-profile {
+    grid-area: pic;
+  }
+  .about-hospital {
+    grid-area: about-hosp;
+  }
+  .profile-desc {
+    grid-area: description;
+  }
+  /*----------------help------------------------------------------*/
+  .help {
+    display: flex;
+    flex-direction: column;
+  }
+  .help button {
+    justify-self: center;
+    align-self: center;
+  }
+  /*---------------footer-tablet-----------------------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-top: 0.5rem;
+  }
+  .ft-main li {
+    color: var(--dark-blue);
+  }
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+}
+@media only screen and (min-width: 1024px) {
+  /*-------------------------Main0-----------------------*/
+  .wrapper {
+    grid-template-columns: 70% 30%;
+    grid-template-areas:
+      "about-hosp pic"
+      "description pic"
+      "description .";
+    grid-gap: 2rem 0rem;
+  }
+
+  .hospital-image {
+    padding-top: 1rem;
+    padding-right: 1rem;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+  #booking {
+    display: flex;
+    width: 100%;
+    padding: 1rem 0rem;
+    text-align: center;
+    justify-items: center;
+    justify-content: center;
+  }
+  .fa-ul {
+    column-count: 2;
+    column-gap: 10rem;
+    margin-bottom: 1rem;
+    margin-left: 5rem;
+  }
+  .desc-paragraph {
+    margin-left: 2rem;
+  }
+  .about-hospital {
+    margin-left: 1rem;
+  }
+  .fa-ul span {
+    font-size: 1rem;
+  }
+  .about-hospital h2 {
+    margin-bottom: 1.5rem;
+  }
+  .about-hospital p {
+    margin-left: 1rem;
+  }
+  .desc-heading {
+    margin-bottom: 0.5rem;
+  }
+  .call-now {
+    padding-right: 1rem;
+  }
+  /*---------------Submit your query-----------------*/
+  .help-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .help p {
+    text-align: left;
+    margin: 0;
+  }
+
+  /*---------------footer-desktop----------------------------*/
+  .ft-main {
+    background-color: var(--white);
+    color: var(--dark-blue);
+    padding-bottom: 1rem;
+    padding-top: 1rem;
+  }
+
+  .foot-li a,
+  .footer1 p {
+    color: var(--dark-blue);
+  }
+  .foot-li li {
+    display: inline;
+    padding-right: 0.5rem;
+  }
+  .first-footer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .footer1 p {
+    padding-bottom: 0rem;
+    margin-bottom: 0rem;
+  }
+  .footer1 {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .fa-instagram {
+    padding-right: 0.2rem;
+  }
+  .ft-main {
+    border-bottom: 0.5rem solid var(--blue);
+  }
+}
